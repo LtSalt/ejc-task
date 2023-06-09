@@ -6,7 +6,7 @@
 # Dependencies ------------------------------------------------------------
 
 if(!"pacman" %in% installed.packages()) install.packages("pacman")
-pacman::p_load(tidyverse, here, readxl, janitor, ggthemes, ggtext, sysfonts, showtext, paletteer)
+pacman::p_load(tidyverse, here, readxl, janitor, ggthemes, ggtext, sysfonts, showtext)
 font_add_google("Montserrat", "montserrat")
 showtext_auto()
 
