@@ -6,7 +6,7 @@
 # Dependencies ------------------------------------------------------------
 
 if(!"pacman" %in% installed.packages()) install.packages("pacman")
-pacman::p_load(tidyverse, here, readxl, janitor, ggthemes, ggtext, sysfonts, showtext)
+pacman::p_load(tidyverse, here, readxl, janitor, ggthemes, sysfonts, showtext)
 font_add_google("Montserrat", "montserrat")
 showtext_auto()
 
@@ -28,6 +28,7 @@ income_cleaned <- income %>%
   pivot_longer(3:last_col(), values_to = "einkommen", names_to = "jahr") %>% # long format for easier grouping and plotting
   mutate(jahr = as.integer(str_replace(jahr, "x", "")),
          einkommen = as.integer(einkommen))
+
 
 # Plotting ----------------------------------------------------------------
 
